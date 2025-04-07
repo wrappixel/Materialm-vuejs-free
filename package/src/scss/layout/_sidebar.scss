@@ -2,6 +2,7 @@
 .leftSidebar {
     box-shadow: 7px 7px 10px rgba(0, 0, 0, .03) !important;
     left: 70px;
+    top: 75px !important;
     border-right: 0 !important;
     .mini-icon {
         display: none;
@@ -22,7 +23,7 @@
 
 
 .scrollnavbar {
-    height: calc(100vh - 100px);
+    height: calc(100vh - 150px);
 
 
 
@@ -208,4 +209,16 @@
 
 .v-navigation-drawer--temporary {
     box-shadow: none !important;
+}
+
+@media screen and (max-width:1280px) {
+    .leftSidebar {
+        top: 0 !important;
+    }
+}
+
+@media screen and (max-width:767px){
+    .scrollnavbar {
+        height: calc(100vh - 80px);
+    }
 }

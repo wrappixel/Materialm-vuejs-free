@@ -10,13 +10,14 @@ import Upgradeversion from './vertical-sidebar/UpgradeBox/index.vue';
 import NotificationDD from './vertical-header/NotificationDD.vue';
 import ProfileDD from './vertical-header/ProfileDD.vue';
 import { Icon } from '@iconify/vue';
+import NavCollapse from './vertical-sidebar/NavCollapse/NavCollapse.vue';
 const sidebarMenu = shallowRef(sidebarItems);
 const sDrawer = ref(true);
 </script>
 
 <template>
     <!------Sidebar-------->
-    <v-navigation-drawer left elevation="0"  app class="leftSidebar"  v-model="sDrawer">
+    <v-navigation-drawer left elevation="0" app class="leftSidebar" width="270" v-model="sDrawer">
         <!---Logo part -->
         <div class="px-4 py-5">
             <Logo />
@@ -25,31 +26,29 @@ const sDrawer = ref(true);
         <!---Navigation -->
         <!-- ---------------------------------------------- -->
         <div>
-        <perfect-scrollbar class="scrollnavbar">
-            <v-list class="pa-4 pt-0">
-                <!---Menu Loop -->
-                <template v-for="(item, i) in sidebarMenu">
-                    <!---Item Sub Header -->
-                    <NavGroup :item="item" v-if="item.header" :key="item.title" />
-
-                    <!---Single Item-->
-                    <NavItem :item="item" v-else class="leftPadding" />
-                    <!---End Single Item-->
-                </template>
-            </v-list>
-            <div class="pa-4">
-                <Upgradeversion/>
-            </div>
-        </perfect-scrollbar>
-    </div>
-
+            <perfect-scrollbar class="scrollnavbar">
+                <v-list class="pa-4 pt-0">
+                    <!---Menu Loop -->
+                    <template v-for="(item, i) in sidebarMenu">
+                        <!---Item Sub Header -->
+                        <NavGroup :item="item" v-if="item.header" :key="item.title" />
+                        <NavCollapse class="" :item="item" :level="0" v-else-if="item.children" />
+                        <!---Single Item-->
+                        <NavItem :item="item" v-else class="leftPadding" />
+                        <!---End Single Item-->
+                    </template>
+                </v-list>
+                <div class="pa-4">
+                    <Upgradeversion />
+                </div>
+            </perfect-scrollbar>
+        </div>
     </v-navigation-drawer>
     <!------Header-------->
-    <v-app-bar elevation="0" height="70" class="bg-background">
+    <v-app-bar elevation="0" height="70" class="bg-background top-header">
         <div class="d-flex align-center justify-space-between w-100">
             <div>
-                <v-btn class="hidden-lg-and-up text-muted" @click="sDrawer = !sDrawer" icon variant="flat"
-                    size="small">
+                <v-btn class="hidden-lg-and-up text-muted" @click="sDrawer = !sDrawer" icon variant="flat" size="small">
                     <Icon icon="solar:hamburger-menu-outline" height="20"></Icon>
                 </v-btn>
                 <!-- Notification -->
@@ -57,7 +56,7 @@ const sDrawer = ref(true);
             </div>
             <div>
                 <!-- Upgrade button -->
-                <v-btn class="mr-2 bg-primary" href="" target="_blank">Download Free</v-btn>
+                <v-btn class="mr-2 bg-primary" href="https://www.wrappixel.com/templates/materialm-vuejs-vuetify-admin-template/?ref=376#demos" target="_blank">Check Pro Template</v-btn>
                 <!-- User Profile -->
                 <ProfileDD />
             </div>
