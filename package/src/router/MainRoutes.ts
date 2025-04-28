@@ -22,6 +22,26 @@ const MainRoutes = {
             component: () => import('@/views/components/Shadow.vue')
         },
         {
+            name: 'Alert',
+            path: '/ui/alerts',
+            component: () => import('@/views/components/Alerts.vue')
+        },
+        {
+            name: 'Buttons',
+            path: '/ui/buttons',
+            component: () => import('@/views/components/Buttons.vue')
+        },
+        {
+            name: 'Cards',
+            path: '/ui/cards',
+            component: () => import('@/views/components/Cards.vue')
+        },
+        {
+            name: 'Tables',
+            path: '/ui/tables',
+            component: () => import('@/views/components/Tables.vue')
+        },
+        {
             name: 'Icons',
             path: '/icons',
             component: () => import('@/views/pages/Icons.vue')

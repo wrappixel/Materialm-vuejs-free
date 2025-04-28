@@ -281,6 +281,11 @@ const sidebarItem: menu[] = [
 
     { header: 'Pages' },
     {
+        title: 'Sample Page',
+        icon: 'planet-3-line-duotone',
+        to: '/sample-page'
+    },
+    {
         title: 'Pricing',
         icon: 'dollar-line-duotone',
         to: 'https://materialm-vue-main.netlify.app/pages/pricing',
@@ -350,6 +355,152 @@ const sidebarItem: menu[] = [
         chip: 'Pro',
         external: true
     },
+
+    { header: "ui" },
+  {
+    title: "Alert",
+    icon: "volume-small-broken",
+    to: "/ui/alerts",
+  },
+  {
+    title: "Button",
+    icon: "tag-horizontal-outline",
+    to: "/ui/buttons",
+  },
+  {
+    title: "Cards",
+    icon: "cardholder-linear",
+    to: "/ui/cards",
+  },
+  {
+    title: "Tables",
+    icon: "suspension-outline",
+    to: "/ui/tables",
+  },
+  {
+    title: "Ui Elements",
+    icon: "code-scan-line-duotone",
+    to: "/components/",
+    children: [
+      {
+        title: "Alert",
+        to: "https://materialm-vue-main.netlify.app/ui-components/alert",
+        chip: "Pro",
+        external: true,
+      },
+      {
+        title: "Accordion",
+        to: "https://materialm-vue-main.netlify.app/ui-components/accordion",
+        chip: "Pro",
+        external: true,
+      },
+      {
+        title: "Avatar",
+        to: "https://materialm-vue-main.netlify.app/ui-components/avatar",
+        chip: "Pro",
+        external: true,
+      },
+      {
+        title: "Chip",
+        to: "https://materialm-vue-main.netlify.app/ui-components/chip",
+        chip: "Pro",
+        external: true,
+      },
+      {
+        title: "Dialog",
+        to: "https://materialm-vue-main.netlify.app/ui-components/dialogs",
+        chip: "Pro",
+        external: true,
+      },
+      {
+        title: "List",
+        to: "https://materialm-vue-main.netlify.app/ui-components/list",
+        chip: "Pro",
+        external: true,
+      },
+      {
+        title: "Menus",
+        to: "https://materialm-vue-main.netlify.app/ui-components/menus",
+        chip: "Pro",
+        external: true,
+      },
+      {
+        title: "Rating",
+        to: "https://materialm-vue-main.netlify.app/ui-components/rating",
+        chip: "Pro",
+        external: true,
+      },
+      {
+        title: "Tabs",
+        to: "https://materialm-vue-main.netlify.app/ui-components/tabs",
+        chip: "Pro",
+        external: true,
+      },
+      {
+        title: "Tooltip",
+        to: "https://materialm-vue-main.netlify.app/ui-components/tooltip",
+        chip: "Pro",
+        external: true,
+      },
+      {
+        title: "Typography",
+        to: "https://materialm-vue-main.netlify.app/ui-components/typography",
+        chip: "Pro",
+        external: true,
+      },
+    ],
+  },
+
+  { header: "Charts" },
+  {
+    title: "Line",
+    icon: "chat-square-2-outline",
+    to: "https://materialm-vue-main.netlify.app/charts/line-chart",
+    chip: "Pro",
+    external: true,
+  },
+  {
+    title: "Gredient",
+    icon: "round-graph-linear",
+    to: "https://materialm-vue-main.netlify.app/charts/gredient-chart",
+    chip: "Pro",
+    external: true,
+  },
+  {
+    title: "Area",
+    icon: "graph-up-linear",
+    to: "https://materialm-vue-main.netlify.app/charts/area-chart",
+    chip: "Pro",
+    external: true,
+  },
+  {
+    title: "Candlestick",
+    icon: "chandelier-broken",
+    to: "https://materialm-vue-main.netlify.app/charts/candlestick-chart",
+    chip: "Pro",
+    external: true,
+  },
+  {
+    title: "Column",
+    icon: "colour-tuneing-broken",
+    to: "https://materialm-vue-main.netlify.app/charts/column-chart",
+    chip: "Pro",
+    external: true,
+  },
+  {
+    title: "Doughnut & Pie",
+    icon: "pie-chart-2-linear",
+    to: "https://materialm-vue-main.netlify.app/charts/doughnut-pie-chart",
+    chip: "Pro",
+    external: true,
+  },
+  {
+    title: "Radialbar & Radar",
+    icon: "radar-2-outline",
+    to: "https://materialm-vue-main.netlify.app/charts/radialbar-chart",
+    chip: "Pro",
+    external: true,
+  },
 
     { header: 'Forms' },
     {
@@ -492,9 +643,7 @@ const sidebarItem: menu[] = [
     {
         title: 'Tabler Icons',
         icon: 'sticker-smile-circle-2-line-duotone',
-        to: 'https://materialm-vue-main.netlify.app/icons/tabler',
-        chip: 'Pro',
-        external: true
+        to: '/icons',
     },
 
     { header: 'auth' },
@@ -586,17 +735,7 @@ const sidebarItem: menu[] = [
         ]
     },
 
-    { header: 'Extra' },
-    {
-        title: 'Icons',
-        icon: 'sticker-smile-circle-2-line-duotone',
-        to: '/icons'
-    },
-    {
-        title: 'Sample Page',
-        icon: 'planet-3-line-duotone',
-        to: '/sample-page'
-    }
+
 ];
 
 export default sidebarItem;
