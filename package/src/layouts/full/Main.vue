@@ -56,7 +56,12 @@ const sDrawer = ref(true);
             </div>
             <div>
                 <!-- Upgrade button -->
-                <v-btn class="mr-2 bg-primary" href="https://www.wrappixel.com/templates/materialm-vuejs-vuetify-admin-template/?ref=376#demos" target="_blank">Check Pro Template</v-btn>
+                <v-btn
+                    class="mr-2 bg-primary"
+                    href="https://wrappixel.com/templates/materialm-vuejs-vuetify-admin-template/?ref=376#demos"
+                    target="_blank"
+                    >Check Pro Template</v-btn
+                >
                 <!-- User Profile -->
                 <ProfileDD />
             </div>

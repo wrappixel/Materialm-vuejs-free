@@ -9,33 +9,41 @@ import icon5 from '@/assets/images/technology/nuxt-cat-icon.svg';
 import icon6 from '@/assets/images/technology/bt-cat-icon.svg';
 
 const items = [
-    { text: 'Templates', icon: 'window-frame-linear', url: 'https://www.wrappixel.com/templates/category/vuejs-templates/' },
+    { text: 'Templates', icon: 'window-frame-linear', url: 'https://wrappixel.com/templates/category/vuejs-templates/' },
     { text: 'Help', icon: 'question-circle-linear', url: 'https://support.wrappixel.com/' },
-    { text: 'Hire Us', icon: 'case-round-linear', url: 'https://www.wrappixel.com/hire-us/' }
+    { text: 'Hire Us', icon: 'case-round-linear', url: 'https://wrappixel.com/hire-us/' }
 ];
 
 const preview_link = [
-    { title: 'VueJs Version', img: icon1, url: 'https://www.wrappixel.com/templates/materialm-vuejs-vuetify-admin-template/?ref=376#demos' },
-    { title: 'Angular Preview', img: icon2, url: 'https://www.wrappixel.com/templates/materialm-material-angular-dashboard-template/?ref=376#demos' },
-    { title: 'Nextjs Preview', img: icon3, url: 'https://www.wrappixel.com/templates/materialm-next-js-tailwind-dashboard-template/?ref=376#demos' },
+    { title: 'VueJs Version', img: icon1, url: 'https://wrappixel.com/templates/materialm-vuejs-vuetify-admin-template/?ref=376#demos' },
+    {
+        title: 'Angular Preview',
+        img: icon2,
+        url: 'https://wrappixel.com/templates/materialm-material-angular-dashboard-template/?ref=376#demos'
+    },
+    {
+        title: 'Nextjs Preview',
+        img: icon3,
+        url: 'https://wrappixel.com/templates/materialm-next-js-tailwind-dashboard-template/?ref=376#demos'
+    },
     {
         title: 'Reactjs Preview',
         img: icon4,
-        url: 'https://www.wrappixel.com/templates/materialm-tailwind-react-admin-template/?ref=376#demos'
+        url: 'https://wrappixel.com/templates/materialm-tailwind-react-admin-template/?ref=376#demos'
     },
     {
         title: 'Nuxtjs Preview',
         img: icon5,
-        url: 'https://www.wrappixel.com/templates/materialm-vuetify-nuxt-js-admin-template/?ref=376#demos'
+        url: 'https://wrappixel.com/templates/materialm-vuetify-nuxt-js-admin-template/?ref=376#demos'
     },
-    { title: 'Bootstrap Preview', img: icon6, url: 'https://www.wrappixel.com/templates/materialm-admin-dashboard-template/?ref=376#demos' }
+    { title: 'Bootstrap Preview', img: icon6, url: 'https://wrappixel.com/templates/materialm-admin-dashboard-template/?ref=376#demos' }
 ];
 </script>
 <template>
     <div class="feature-topbar w-full py-4 px-6 w-100">
         <div class="d-flex flex-lg-row flex-column gap-3 justify-space-between align-center">
             <div class="d-flex align-center ga-6">
-                <a href="https://www.wrappixel.com/" target="_blank" class="lh-0">
+                <a href="https://wrappixel.com/" target="_blank" class="lh-0">
                     <img src="@/assets/images/logos/logo-wrappixel.svg" width="148"
                 /></a>
                 <div class="d-lg-flex d-none items-center ga-4 topbar-links border-s border-opacity-25 ps-6">
@@ -57,7 +65,12 @@ const preview_link = [
                 <div class="d-flex flex-md-row flex-wrap justify-md-end justify-center ga-3">
                     <v-menu>
                         <template v-slot:activator="{ props }">
-                            <v-btn variant="outlined" class="border-blue text-surface text-h6 font-weight-medium" rounded="sm" v-bind="props">
+                            <v-btn
+                                variant="outlined"
+                                class="border-blue text-surface text-h6 font-weight-medium"
+                                rounded="sm"
+                                v-bind="props"
+                            >
                                 <span class="d-flex ga-2"> Live Preview <ChevronDownIcon size="20" /> </span>
                             </v-btn>
                         </template>
@@ -67,16 +80,22 @@ const preview_link = [
                                     <img :src="item.img" width="18" :alt="item.img" /> {{ item.title }}</v-list-item-title
                                 >
                             </v-list-item>
-                        </v-list> 
+                        </v-list>
                     </v-menu>
                     <v-btn
-                        class="purple-btn text-surface text-h6 font-weight-medium" rounded="sm"
-                        href="https://www.wrappixel.com/templates/materialm-vuejs-vuetify-admin-template/?ref=376#demos"
+                        class="purple-btn text-surface text-h6 font-weight-medium"
+                        rounded="sm"
+                        href="https://wrappixel.com/templates/materialm-vuejs-vuetify-admin-template/?ref=376#demos"
                         target="_blank"
                     >
                         <span class="d-flex ga-2"> <Icon icon="solar:crown-linear" height="18" width="18" /> Get Pro</span>
                     </v-btn>
-                    <v-btn class="green-btn text-h6 font-weight-medium" href="http://wrappixel.com/all-access-pass/?ref=376" target="_blank" rounded="sm">
+                    <v-btn
+                        class="green-btn text-h6 font-weight-medium"
+                        href="http://wrappixel.com/all-access-pass/?ref=376"
+                        target="_blank"
+                        rounded="sm"
+                    >
                         <span class="d-flex ga-2"> <Icon icon="solar:bolt-linear" height="18" width="18" /> All Access Pass</span>
                     </v-btn>
                 </div>
